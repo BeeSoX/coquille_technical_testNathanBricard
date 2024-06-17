@@ -40,12 +40,12 @@ class CustomerRepository extends ServiceEntityRepository
         }
     }
 
-    public function getAllCustomers($page = 1)
+    public function getAllCustomers($page = 1): Paginator
     {
         // Create our query
         $qb = $this->createQueryBuilder('c')
             ->orderBy('c.date_add', 'DESC');
 
-        return (new Paginator($qb))->paginate(1);
+        return (new Paginator($qb))->paginate($page);
     }
 }

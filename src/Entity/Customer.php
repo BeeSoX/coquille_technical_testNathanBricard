@@ -70,12 +70,12 @@ class Customer
         return $this;
     }
 
-    public function getSocietyName(): ?string
+    public function getSociety_Name(): ?string
     {
         return $this->society_name;
     }
 
-    public function setSocietyName(string $society_name): static
+    public function setSociety_Name(string $society_name): static
     {
         $this->society_name = $society_name;
 

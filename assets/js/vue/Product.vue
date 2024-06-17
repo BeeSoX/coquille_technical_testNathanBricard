@@ -65,7 +65,10 @@ export default {
                 name: newProduct.name,
                 description: newProduct.description,
                 price: newProduct.price
-            }).then(response => {
+            },
+        headers: {
+            'Content-Type': 'application/json'
+        }).then(response => {
                 $('#addModal').modal('hide');
                 if (!response.data.error) {
                     toast.success('Produit ajouté.');
